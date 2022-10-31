@@ -1,0 +1,39 @@
+<template>
+    <div class="m-loading">
+        <div class="m-loading-icon"></div>
+    </div>
+</template>
+<script>
+export default {};
+</script>
+<style>
+.m-loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999999;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.m-loading-icon {
+    position: absolute;
+    background-image: url(../../../assets/loading.svg);
+    background-repeat: no-repeat;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+</style>
